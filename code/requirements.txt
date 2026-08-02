@@ -1,0 +1,12 @@
+pandas
+numpy
+groq
+python-dotenv
+easyocr
+opencv-python
+Pillow
+faster-whisper
+torch
+torchvision
+torchaudio
+scikit-learn

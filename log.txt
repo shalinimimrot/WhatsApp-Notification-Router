@@ -1,0 +1,128 @@
+HackerRank Orchestrate Hackathon
+Project: MessagePilot AI – Intelligent Multimodal WhatsApp Notification Router
+
+AI Assistant Used:
+OpenAI ChatGPT (GPT-5.5)
+
+Development Summary
+
+Day 1
+------
+1. Understood the problem statement and evaluation criteria.
+2. Analysed the provided datasets and input/output schema.
+3. Designed a hybrid AI-based notification routing pipeline.
+4. Planned the overall architecture for multimodal message understanding.
+5. Decided to support text, image, and voice messages.
+6. Selected Groq Llama 3.3 (70B) as the semantic reasoning model.
+7. Designed the JSON response format for structured LLM outputs.
+8. Created the initial project structure.
+
+Data Processing
+---------------
+1. Loaded all provided datasets using a dedicated DataLoader.
+2. Parsed user, business, group, and historical message information.
+3. Connected all contextual datasets for personalized routing.
+
+Multimodal Processing
+---------------------
+1. Implemented text message processing.
+2. Added EasyOCR for extracting text from image messages.
+3. Added Faster-Whisper for speech-to-text transcription of voice notes.
+4. Unified text, OCR output, and speech transcripts into a common text representation.
+
+LLM Integration
+---------------
+1. Integrated Groq API.
+2. Designed prompts to classify messages into the required message types.
+3. Generated structured semantic outputs including:
+   - message_type
+   - urgency
+   - importance
+   - risk
+   - spam score
+   - summary
+4. Fixed prompt formatting issues.
+5. Corrected JSON parsing errors.
+6. Handled API rate-limit issues during development.
+
+Historical Retrieval
+--------------------
+1. Implemented TF-IDF vectorization.
+2. Used cosine similarity to retrieve similar historical messages.
+3. Returned supporting evidence_message_ids for explainability.
+
+Personalization
+---------------
+Implemented routing using:
+- User notification behaviour
+- Group type
+- Business verification
+- User-business interaction history
+- Notification fatigue
+- Historical engagement
+
+Safety Features
+---------------
+Implemented detection for:
+- Spam
+- Scam
+- Prompt injection
+- Suspicious promotional messages
+
+Routing Logic
+-------------
+Built a hybrid routing engine combining:
+- AI semantic analysis
+- User context
+- Group context
+- Business context
+- Historical retrieval
+- Rule-based scoring
+
+Final routing decisions:
+- Notify
+- Digest
+- Mute
+
+Development Improvements
+------------------------
+During development the following improvements were made:
+
+- Improved routing heuristics.
+- Refined confidence score generation.
+- Improved reasoning messages.
+- Added business trust evaluation.
+- Added notification fatigue handling.
+- Improved explainability through historical evidence retrieval.
+- Verified output format against sample_messages.csv.
+
+Testing
+-------
+1. Generated predictions for every message.
+2. Validated output.csv format.
+3. Verified required columns.
+4. Compared predictions with sample data using the evaluation script.
+5. Fixed runtime and API-related issues encountered during development.
+
+Project Documentation
+---------------------
+Prepared:
+- Project README
+- Architecture diagram
+- requirements.txt
+- Submission package
+
+Final Deliverables
+------------------
+- Complete runnable Python source code
+- output.csv
+- README.md
+- architecture.png
+- requirements.txt
+- Chat transcript
+
+Development Outcome
+-------------------
+The final solution implements a hybrid AI-powered notification routing system that combines multimodal message understanding, semantic reasoning, contextual personalization, historical retrieval, and rule-based safety checks to intelligently classify WhatsApp notifications into Notify, Digest, or Mute while providing explainable predictions and supporting evidence.
+
+End of Transcript
